@@ -95,6 +95,10 @@ module TBK
                 'TBK_PARAM' => self.param
               })
 
+              # Test SSL
+              http.ssl_version = 'TLSv1'
+              http.ssl_cipher = 'rc4-sha'
+
               # http.read_timeout = Webpay::Config.timeout
               http.request post
             end
